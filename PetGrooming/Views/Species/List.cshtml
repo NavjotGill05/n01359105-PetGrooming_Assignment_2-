@@ -1,0 +1,17 @@
+﻿@model List<PetGrooming.Models.Species>
+@{
+    ViewBag.Title = "List";
+}
+
+<h2>List of species</h2>
+<a href="/Species/Add">Add new Species</a>
+
+@{
+    foreach (var species in @Model)
+    {
+    <div>
+        <a href="/Species/Show/@species.SpeciesID">@species.Name</a>
+        <a href="/Species/Delete/@species.SpeciesID">DELETE</a>
+    </div>
+    }
+}

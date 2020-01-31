@@ -1,0 +1,16 @@
+﻿@{
+    ViewBag.Title = "Add";
+}
+
+<h2>Add a new Species</h2>
+
+<form method="POST" action="/Species/Add">
+    <!--it will send data to Add method of PetController-->
+    <div>
+        <span>Name:</span>
+        <input id="SpeciesName" type="text" name="SpeciesName" />
+    </div>
+    <div>
+        <input type="submit" value="Add Species">
+    </div>
+</form>

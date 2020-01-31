@@ -1,0 +1,23 @@
+﻿<!--it define list of type pet and controller will provide that information-->
+@model List<PetGrooming.Models.Pet>
+
+@{
+    ViewBag.Title = "List";
+}
+
+<h2>List of Pets</h2>
+<a href="/Pet/Add">Add new Pet</a>
+
+@{
+    foreach (var Pet in @Model)
+    {
+    <div>
+        <span><a href="/Pet/Show/@Pet.PetID">@Pet.PetName</a></span>
+        <span>@Pet.Species.Name</span>
+        <span>@Pet.Weight</span>
+
+        <a href="/Pet/Update/@Pet.PetID">UPDATE</a>
+        <a href="/Pet/Delete/@Pet.PetID">DELETE</a>
+    </div>
+    }
+}
